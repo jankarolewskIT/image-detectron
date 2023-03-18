@@ -1,0 +1,14 @@
+version: "3"
+services:
+  frontend:
+    build:
+      context: ui
+    ports:
+      - 8000:8000
+  postgres:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
